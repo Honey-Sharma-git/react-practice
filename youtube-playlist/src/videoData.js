@@ -1,5 +1,6 @@
 export default [
   {
+    href: "https://youtu.be/tVzUXW6siu0?si=McRjJcpvYQmuuKdc",
     id: 1,
     img: {
       src: "/src/assets/images/thumbnails/1.png",
@@ -7,18 +8,79 @@ export default [
     },
     videoTitle: "React lesson-1 2024 | CodeWithHoney",
     channelName: "CodeWithHoney",
-    videoViews: 113,
+    videoViews: "113 views",
     uploadDate: "1 year ago",
   },
   {
+    href: "",
     id: 2,
     img: {
-      src: "/src/assets/images/thumbnails/1.png",
+      src: "/src/assets/images/thumbnails/2.png",
       alt: "react-lesson-1",
     },
     videoTitle: "React lesson-2 2024 | CodeWithHoney",
     channelName: "CodeWithHoney",
-    videoViews: 213,
+    videoViews: "213 views",
+    uploadDate: "1.1 year ago",
+  },
+  {
+    href: "",
+    id: 2,
+    img: {
+      src: "/src/assets/images/thumbnails/3.png",
+      alt: "react-lesson-1",
+    },
+    videoTitle: "React lesson-3 2024 | CodeWithHoney",
+    channelName: "CodeWithHoney",
+    videoViews: "213 views",
+    uploadDate: "1.1 year ago",
+  },
+  {
+    href: "",
+    id: 2,
+    img: {
+      src: "/src/assets/images/thumbnails/4.png",
+      alt: "react-lesson-4",
+    },
+    videoTitle: "React lesson-4 2024 | CodeWithHoney",
+    channelName: "CodeWithHoney",
+    videoViews: "213 views",
+    uploadDate: "1.1 year ago",
+  },
+  {
+    href: "",
+    id: 2,
+    img: {
+      src: "/src/assets/images/thumbnails/5.png",
+      alt: "react-lesson-5",
+    },
+    videoTitle: "React lesson-5 2024 | CodeWithHoney",
+    channelName: "CodeWithHoney",
+    videoViews: "213 views",
+    uploadDate: "1.1 year ago",
+  },
+  {
+    href: "",
+    id: 2,
+    img: {
+      src: "/src/assets/images/thumbnails/6.png",
+      alt: "react-lesson-6",
+    },
+    videoTitle: "React lesson-6 2024 | CodeWithHoney",
+    channelName: "CodeWithHoney",
+    videoViews: "213 views",
+    uploadDate: "1.1 year ago",
+  },
+  {
+    href: "",
+    id: 2,
+    img: {
+      src: "/src/assets/images/thumbnails/7.png",
+      alt: "react-lesson-7",
+    },
+    videoTitle: "React lesson-7 2024 | CodeWithHoney",
+    channelName: "CodeWithHoney",
+    videoViews: "213 views",
     uploadDate: "1.1 year ago",
   },
 ];

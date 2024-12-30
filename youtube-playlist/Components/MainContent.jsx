@@ -4,11 +4,12 @@ export default function MainContent() {
   const videoElement = videoData.map((value) => {
     return (
       <VideoComp
+        href={value.href}
         src={value.img.src}
         title={value.videoTitle}
         channelName={value.channelName}
-        videoViews = {value.videoViews}
-        uploadDate = {value.uploadDate}
+        videoViews={value.videoViews}
+        uploadDate={value.uploadDate}
       />
     );
   });
