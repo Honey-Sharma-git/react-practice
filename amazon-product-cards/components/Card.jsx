@@ -1,5 +1,4 @@
 export default function Card(props) {
-  console.log(props);
   return (
     <article className="card-container">
       <section className="card">

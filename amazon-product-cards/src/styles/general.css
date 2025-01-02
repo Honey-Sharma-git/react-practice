@@ -2,10 +2,11 @@
 
 /* VARIABLES */
 :root {
-  --BTN-PRIMARY-COLOR: #febd69;
-  --BTN-SECONDARY-COLOR: #ff9c1c;
+  --BTN-PRIMARY-COLOR: rgb(255 216 20);
+  --BTN-SECONDARY-COLOR: rgb(246, 208, 20);
   --FONT-FAMILY: Inter, sans-serif;
   --NAV-BAR-BG-COLOR: #131921;
+  --SELECT-COLOR: rgb(240 240 240);
 }
 /* GENERAL STYLES */
 body {
