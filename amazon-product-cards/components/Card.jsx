@@ -5,7 +5,9 @@ export default function Card(props) {
         <figure className="card__product-img-container">
           <img className="product-img" src={props.imgSrc} alt={props.imgAlt} />
         </figure>
-        <h3 className="card__product-title">{props.productName}</h3>
+        <h3 className="card__product-title limit-text-to-1-line">
+          {props.productName}
+        </h3>
         <figure className="card__product-ratings-container">
           <img
             className="product-ratings-stars"
@@ -14,7 +16,9 @@ export default function Card(props) {
           />
           <span className="product-ratings-count">{props.ratingsCount}</span>
         </figure>
-        <p className="card__product-price">Rs. {props.price}</p>
+        <p className="card__product-price">
+          Rs. {Intl.NumberFormat("en-IN").format(props.price)}
+        </p>
         <form className="card__productQty-button">
           <select className="productQty" name="productQty" id="productQty">
             <option value="1">1</option>

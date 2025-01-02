@@ -20,7 +20,7 @@ export default function App() {
   return (
     <>
       <Header />
-      {card}
+      <main className="main">{card}</main>
       <Footer />
     </>
   );

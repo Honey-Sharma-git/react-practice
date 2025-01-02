@@ -1,6 +1,7 @@
 .main {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   gap: 5px;
 }
 .card-container {
@@ -18,14 +19,20 @@
   flex-flow: column nowrap;
   gap: 10px;
   padding: 1rem;
-  width: fit-content;
+  width: min-content;
   background-color: white;
   border-radius: 5px;
 }
-.card__product-img-container,
+.card__product-img-container {
+  width: 230px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
 .product-img {
-  height: 150px;
-  aspect-ratio: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card__product-title {
