@@ -11,9 +11,13 @@
 /* GENERAL STYLES */
 body {
   font-family: var(--FONT-FAMILY);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
 }
 img {
-  display: block;
+  display: inline;
+  vertical-align: middle;
 }
 button {
   cursor: pointer;
