@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+:root {
+  --BG-COLOR: beige;
+  --BG-IMAGE: url("../assets/images/backdrop.webp");
+  --FONT-COLOR: ;
+  --FONT-FAMILY: Inter, sans-serif;
+  --BTN-COLOR: ;
+}
+body {
+  font-family: var(--FONT-FAMILY);
+  background-color: var(--BG-COLOR);
+  background-image: var(--BG-IMAGE);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
