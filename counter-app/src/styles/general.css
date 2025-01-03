@@ -4,13 +4,17 @@
   --BG-IMAGE: url("../assets/images/backdrop.webp");
   --FONT-COLOR: ;
   --FONT-FAMILY: Inter, sans-serif;
-  --BTN-COLOR: ;
+  --BTN-PRIMARY-COLOR: #7ECFC6;
+  --BTN-SECONDARY-COLOR: #55cdbf;
 }
-body {
+body {  
   font-family: var(--FONT-FAMILY);
   background-color: var(--BG-COLOR);
   background-image: var(--BG-IMAGE);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
