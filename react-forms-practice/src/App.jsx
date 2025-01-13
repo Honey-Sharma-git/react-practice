@@ -1,160 +1,159 @@
 export default function App() {
   function handleSubmit(event) {
-    //Form settings
-    event.preventDefault();
-    const formElement = event.currentTarget;
-    const formData = new FormData(formElement);
-    formElement.reset();
-
-    //Extracting data:
-    const firstName = formData.get("firstName");
-    const secondName = formData.get("secondName");
-    const email = formData.get("email");
-    const password = formData.get("password");
+    // event.preventDefault();
+    const currentElement = event.currentTarget;
+    const formData = new FormData(currentElement);
+    const data = Object.fromEntries(formData);
     const skills = formData.getAll("skills");
-    const workmode = formData.getAll("workmode");
-    const salaryexp = formData.getAll("salaryexp");
-    const favcolor = formData.getAll("favcolor");
-    console.log(
-      firstName,
-      secondName,
-      email,
-      password,
-      skills,
-      workmode,
-      salaryexp,
-      favcolor
-    );
+    data.skills = skills;
+    console.log(data);
+    currentElement.reset();
   }
-  return (
-    <main className="main">
-      <form className="main__form" method="post" onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First name:</label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          placeholder="Honey"
-          defaultValue={"Ram"}
-        />
-        <label htmlFor="secondName">Second name:</label>
-        <input
-          type="text"
-          id="secondName"
-          name="secondName"
-          placeholder="Sharma"
-          defaultValue={"Sharma"}
-        />
-        <label htmlFor="email">Email address:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="myemail@gmail.com"
-          defaultValue={"myemail@example.com"}
-        />
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          defaultValue={"mySecretPassword123"}
-        />
-        <fieldset>
-          <legend>Skills:</legend>
-          <label htmlFor="html">
-            <input
-              type="checkbox"
-              defaultChecked={true}
-              name="skills"
-              id="html"
-              value="html"
-            />
-            HTML
-          </label>
-          <label htmlFor="css">
-            <input
-              type="checkbox"
-              defaultChecked={true}
-              name="skills"
-              id="css"
-              value="css"
-            />
-            CSS
-          </label>
-          <label htmlFor="javascript">
-            <input
-              type="checkbox"
-              name="skills"
-              id="javascript"
-              defaultChecked={true}
-              value="javascript"
-            />
-            JavaScript
-          </label>
-          <label htmlFor="react">
-            <input type="checkbox" name="skills" id="react" value="react" />
-            React
-          </label>
-          <label htmlFor="tailwindcss">
-            <input
-              type="checkbox"
-              name="skills"
-              id="tailwindcss"
-              value="tailwindcss"
-            />
-            Tailwind CSS
-          </label>
-          <label htmlFor="nodejs">
-            <input type="checkbox" name="skills" id="nodejs" value="nodejs" />
-            Nodejs
-          </label>
-          <label htmlFor="angular">
-            <input type="checkbox" name="skills" id="angular" value="angular" />
-            Angular
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Work mode:</legend>
-          <label htmlFor="wfh">
-            <input type="radio" name="workmode" value={"WFH"} id="wfh" />
-            WFH
-          </label>
-          <label htmlFor="wfo">
-            <input type="radio" name="workmode" value={"WFO"} id="wfo" />
-            WFO
-          </label>
-          <label htmlFor="hybrid">
-            <input
-              type="radio"
-              name="workmode"
-              value={"Hybrid"}
-              id="hybrid"
-              defaultChecked={true}
-            />
-            Hybrid
-          </label>
-        </fieldset>
-        <label htmlFor="salaryexp"> Salary expectation:</label>
-        <input
-          type="range"
-          name="salaryexp"
-          id="salaryexp"
-          min={400000}
-          max={1600000}
-          defaultValue={800000}
-        />
-        <label htmlFor="favcolor">Choose T-shirt color:</label>
-        <select name="favcolor" id="favcolor">
-          <option value="Not selected">Select color</option>
-          <option value="Red">Red</option>
-          <option value="Blue">Blue</option>
-          <option value="Green">Green</option>
-        </select>
+  function handleReset(event) {
+    event.currentTarget.reset();
+  }
 
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-      </form>
-    </main>
+  return (
+    <form
+      method="post"
+      target="_blank"
+      onSubmit={handleSubmit}
+      action="https://httpbin.org/post"
+      autoComplete="off"
+    >
+      <label htmlFor="searchQuery">Search:</label>
+      <input
+        type="search"
+        name="searchQuery"
+        id="searchQuery"
+        placeholder="name, phone"
+      />
+      <label htmlFor="firstName">First name: </label>
+      <input
+        name="firstName"
+        id="firstName"
+        type="text"
+        placeholder="Honey"
+        autoFocus
+        defaultValue={"Honey"}
+      />
+      <label htmlFor="lastName">Last name:</label>
+      <input
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="Sharma"
+        defaultValue={"Sharma"}
+      />
+      <label htmlFor="dob">Date of Birth:</label>
+      <input type="date" name="dob" id="dob" defaultValue={"2025-01-14"} />
+      <label htmlFor="email">Email address:</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        defaultValue={"honey@example.com"}
+      />
+      <label htmlFor="password">Password:</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        defaultValue={"Honey123"}
+      />
+      <label htmlFor="favColor">Favorite color:</label>
+      <input type="color" name="favColor" id="favColor" />
+      <label htmlFor="state">State:</label>
+      <select name="state" id="state" defaultValue={"Rajasthan"}>
+        <option>Select state</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Delhi">Delhi</option>
+        <option value="Gujarat">Gujarat</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Madhya Pradesh">Madhya Pradesh</option>
+      </select>
+      <fieldset>
+        <legend>Skills:</legend>
+        <label htmlFor="skills">
+          <input
+            type="checkbox"
+            name="skills"
+            id="javascript"
+            value="javascript"
+            defaultChecked={true}
+          />
+          javascript
+        </label>
+        <label htmlFor="skills">
+          <input
+            type="checkbox"
+            name="skills"
+            id="css"
+            value="css"
+            defaultChecked={true}
+          />
+          css
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Gender:</legend>
+        <label htmlFor="gender">
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value={"male"}
+            defaultChecked={true}
+          />
+          Male
+        </label>
+        <br />
+        <label htmlFor="gender">
+          <input type="radio" id="female" name="gender" value={"female"} />
+          Female
+        </label>
+        <br />
+        <label htmlFor="gender">
+          <input type="radio" id="other" name="gender" value={"other"} />
+          Other
+        </label>
+        <br />
+      </fieldset>
+      <label htmlFor="mobile">Contact number:</label>
+      <input
+        type="tel"
+        name="mobile"
+        id="mobile"
+        placeholder="+91-8955687845"
+        defaultValue={"+91-8955687845"}
+      />
+      <label htmlFor="age">Age:</label>
+      <input type="number" name="age" id="age" defaultValue={25} />
+      <label htmlFor="experience">Work experience</label>
+      <input type="range" name="experience" id="experience" defaultValue={70} />
+      <label htmlFor="linkedinUrl">Enter your linkedIn profile URL:</label>
+      <input
+        type="url"
+        name="linkedinUrl"
+        id="linkedinUrl"
+        defaultValue={"https://www.linkedin.com"}
+      />
+      <label htmlFor="resume">Upload your resume:</label>
+      <input type="file" name="resume" id="resume" />
+      <label htmlFor="month">Submission month:</label>
+      <input type="month" name="month" id="month" defaultValue={"2025-07"} />
+      <label htmlFor="week">Expected week of joining:</label>
+      <input type="week" name="week" id="week" />
+
+      <input
+        type="button"
+        value="clickable button"
+        onClick={() => {
+          alert("Button clicked");
+        }}
+      />
+      <button type="submit">Submit</button>
+      <input type="reset" value="reset" onClick={handleReset} />
+    </form>
   );
 }
