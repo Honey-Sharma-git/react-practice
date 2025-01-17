@@ -1,0 +1,38 @@
+* {
+  outline: 1px solid red;
+}
+.product-img {
+  height: 100px;
+  aspect-ratio: 1;
+}
+.mrpPrice {
+  text-decoration: line-through;
+}
+.star-ratings {
+  width: 100px;
+}
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 50px;
+}
+.card-form {
+  display: flex;
+  flex-flow: column;
+  
+}
+.card {
+  width: 250px;
+}
+.product-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow-y: hidden;
+}
+.product-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+}
